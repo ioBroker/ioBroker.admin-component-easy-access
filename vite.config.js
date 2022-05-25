@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     // react(),
     federation({
-      filename: 'remoteEntry.js',
+      filename: 'customComponents.js',
       exposes: {
         './Components': './src/components.jsx',
       },

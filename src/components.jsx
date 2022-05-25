@@ -1,3 +1,3 @@
-import ConfigCustomEasyAccess from "./ConfigCustomEasyAccess";
+import ConfigCustomEasyAccess from './ConfigCustomEasyAccess';
 
-export default {ConfigCustomEasyAccess};
+export default { ConfigCustomEasyAccess };
