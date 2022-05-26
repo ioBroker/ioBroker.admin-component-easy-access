@@ -11,6 +11,8 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@alcalzone/release-script": "^3.5.9",
+    "@alcalzone/release-script-plugin-license": "^3.5.9",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@iobroker/adapter-react-v5": "^3.0.14",

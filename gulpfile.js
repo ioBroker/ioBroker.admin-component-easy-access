@@ -45,6 +45,9 @@ gulp.task('1-compile', async () => build());
 
 gulp.task('2-copy', () => Promise.all([
     gulp.src(['dist/assets/*.js', '!dist/assets/__federation_shared_*.js', '!dist/assets/__federation_lib_semver.js']).pipe(gulp.dest('build/admin/custom')),
+    gulp.src(['src/i18n/*.json']).pipe(gulp.dest('build/admin/custom/i18n')),
+    gulp.src(['img/*']).pipe(gulp.dest('build/img')),
+    gulp.src(['README.md', 'LICENSE']).pipe(gulp.dest('build')),
     gulp.src(['src/package.json']).pipe(gulp.dest('build')),
 ]));
 
