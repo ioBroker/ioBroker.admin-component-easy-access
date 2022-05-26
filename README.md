@@ -28,7 +28,7 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.1.0 (2022-05-26)
 * (bluefox) Added map files
 
 ### 0.0.2 (2022-05-26)
