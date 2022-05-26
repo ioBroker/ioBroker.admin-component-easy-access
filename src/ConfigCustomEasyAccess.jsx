@@ -10,7 +10,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Checkbox from '@mui/material/Checkbox';
 
-import {i18n, ConfigGeneric} from '@iobroker/adapter-react-v5';
+import { i18n, ConfigGeneric } from '@iobroker/adapter-react-v5';
 
 const styles = theme => ({
     table: {
@@ -53,9 +53,9 @@ class ConfigCustomEasyAccess extends ConfigGeneric {
                 <Table className={this.props.classes.table} size="small">
                     <TableHead>
                         <TableRow>
-                            <TableCell className={this.props.classes.header}>{i18n.t('Instance')}</TableCell>
-                            <TableCell className={this.props.classes.header}>{i18n.t('Config')}</TableCell>
-                            <TableCell className={this.props.classes.header}>{i18n.t('Tab')}</TableCell>
+                            <TableCell className={this.props.classes.header}>{i18n.t('custom_easy_Instance')}</TableCell>
+                            <TableCell className={this.props.classes.header}>{i18n.t('custom_easy_Config')}</TableCell>
+                            <TableCell className={this.props.classes.header}>{i18n.t('custom_easy_Tab')}</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
