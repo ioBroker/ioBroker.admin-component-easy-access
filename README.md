@@ -7,7 +7,7 @@ This component is used for admin setting.
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.0.2 (2022-05-26)
 * (bluefox) Added i18n
 
 ## License
