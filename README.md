@@ -3,10 +3,34 @@ This component is used for admin setting.
 
 ![Component](img/component.png)
 
+## How to use
+Build process creates files in directory build.
+
+All files from `build/admin` folder must be in adapter admin directory. 
+
+To use this component in admin add to jsonConfig.json file:
+```
+    "accessAllowedConfigs": {
+      "type": "custom",
+      "i18n": true,
+      "url": "custom/customComponents.js",
+      "name": "EasyConfig/Components/ConfigCustomEasyAccess"
+    }
+```
+
+Explanation: 
+- `EasyConfig` - is unique name of this set of components
+- `Components` - file name where all components are
+- `ConfigCustomEasyAccess` - name of component in `Components.js`which must be used.
+- `i18n` - if set to `true`, so the admin will load language files from `i18n`directory (in the same directory, where `customComponents.js` is), if set to language object, it will be used directly. Example: `{"easyconfig_text": {"en": "Text"}}`.
+
 <!--
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
+### **WORK IN PROGRESS**
+* (bluefox) Added map files
+
 ### 0.0.2 (2022-05-26)
 * (bluefox) Added i18n
 
