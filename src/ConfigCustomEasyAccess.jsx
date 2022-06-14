@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@mui/styles';
 
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Checkbox from '@mui/material/Checkbox';
+import {Table,
+TableBody,
+TableCell,
+TableContainer,
+TableHead,
+TableRow,
+Checkbox,}  from '@mui/material';
+
 
 import { i18n, ConfigGeneric } from '@iobroker/adapter-react-v5';
 
