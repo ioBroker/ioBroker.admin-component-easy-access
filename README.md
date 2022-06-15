@@ -28,7 +28,7 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.2.0 (2022-06-15)
 * (bluefox) Changed builder to webpack
 
 ### 0.1.1 (2022-06-01)
