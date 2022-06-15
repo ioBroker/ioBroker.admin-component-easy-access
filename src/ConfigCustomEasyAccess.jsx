@@ -2,15 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@mui/styles';
 
-import {Table,
-TableBody,
-TableCell,
-TableContainer,
-TableHead,
-TableRow,
-Checkbox,}  from '@mui/material';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Checkbox,
+}  from '@mui/material';
 
-
+// important to make from package and not from some children.
+// invalid
+// import ConfigGeneric from '@iobroker/adapter-react-v5/ConfigGeneric';
+// valid
 import { i18n, ConfigGeneric } from '@iobroker/adapter-react-v5';
 
 const styles = theme => ({
