@@ -10,7 +10,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build": "gulp",
-    "prepublishOnly": "echo Run publish in build && exit 1",
+    "prepublishOnly": "echo Run publish in dist && exit 1",
     "release": "release-script",
     "release-patch": "release-script patch --yes",
     "release-minor": "release-script minor --yes",

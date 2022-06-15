@@ -11,7 +11,7 @@ const makeShared = pkgs => {
 };
 
 module.exports = {
-    name: 'ConfigCustomEasyAccess',
+    name: 'ConfigCustomEasyAccessSet',
     // library: { type: 'module' },
     // library: { type: 'var', name: 'MaterialDemo' },
     filename: 'customComponents.js',
