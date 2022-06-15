@@ -19,7 +19,7 @@ To use this component in admin add to jsonConfig.json file:
 ```
 
 Explanation: 
-- `ConfigCustomEasyAccess` - is unique name of this set of components
+- `ConfigCustomEasyAccessSet` - is unique name of this set of components
 - `Components` - file name where all components are
 - `ConfigCustomEasyAccess` - name of component in `Components.js`which must be used.
 - `i18n` - if set to `true`, so the admin will load language files from `i18n`directory (in the same directory, where `customComponents.js` is), if set to language object, it will be used directly. Example: `{"easyconfig_text": {"en": "Text"}}`.
