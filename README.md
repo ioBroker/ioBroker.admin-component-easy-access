@@ -28,7 +28,7 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.3.0 (2022-06-17)
 * (bluefox) Corrected issue with version of common packages
 
 ### 0.2.0 (2022-06-15)
