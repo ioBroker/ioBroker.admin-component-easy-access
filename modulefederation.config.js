@@ -12,7 +12,7 @@ const makeShared = pkgs => {
 };
 
 module.exports = {
-    name: 'ConfigCustomEasyAccessSet',
+    name: 'AdminComponentEasyAccessSet',
     filename: 'customComponents.js',
     exposes: {
         './Components': './src/Components.jsx',
