@@ -14,12 +14,12 @@ To use this component in admin add to jsonConfig.json file:
       "type": "custom",
       "i18n": true,
       "url": "custom/customComponents.js",
-      "name": "ConfigCustomEasyAccessSet/Components/ConfigCustomEasyAccess"
+      "name": "AdminComponentEasyAccessSet/Components/ConfigCustomEasyAccess"
     }
 ```
 
 Explanation: 
-- `ConfigCustomEasyAccessSet` - is unique name of this set of components
+- `AdminComponentEasyAccessSet` - is unique name of this set of components
 - `Components` - file name where all components are
 - `ConfigCustomEasyAccess` - name of component in `Components.js`which must be used.
 - `i18n` - if set to `true`, so the admin will load language files from `i18n`directory (in the same directory, where `customComponents.js` is), if set to language object, it will be used directly. Example: `{"easyconfig_text": {"en": "Text"}}`.
@@ -28,6 +28,9 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
+### **WORK IN PROGRESS**
+* (bluefox) Corrected issue with version of common packages
+
 ### 0.2.0 (2022-06-15)
 * (bluefox) Changed builder to webpack
 
