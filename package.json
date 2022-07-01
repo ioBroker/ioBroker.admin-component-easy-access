@@ -16,11 +16,11 @@
   "dependencies": {
     "@alcalzone/release-script": "^3.5.9",
     "@alcalzone/release-script-plugin-license": "^3.5.9",
-    "@emotion/react": "^11.9.0",
+    "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.8.1",
     "@iobroker/adapter-react-v5": "^3.0.14",
     "@mui/material": "^5.8.6",
-    "@mui/styles": "^5.8.0",
+    "@mui/styles": "^5.8.6",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-ace": "^10.1.0",
