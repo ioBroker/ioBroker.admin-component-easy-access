@@ -17,7 +17,7 @@
     "@alcalzone/release-script": "^3.5.9",
     "@alcalzone/release-script-plugin-license": "^3.5.9",
     "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
+    "@emotion/styled": "^11.10.0",
     "@iobroker/adapter-react-v5": "^3.1.16",
     "@mui/material": "^5.8.6",
     "@mui/styles": "^5.9.2",
