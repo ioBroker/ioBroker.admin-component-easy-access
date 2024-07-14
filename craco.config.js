@@ -1,6 +1,6 @@
 const CracoEsbuildPlugin = require('craco-esbuild');
 const { ProvidePlugin } = require('webpack');
-const cracoModuleFederation = require('craco-module-federation');
+const cracoModuleFederation = require('@iobroker/adapter-react-v5/craco-module-federation');
 
 module.exports = {
     plugins: [
@@ -9,11 +9,11 @@ module.exports = {
     ],
     devServer: {
         proxy: {
-            '/files': 'http://localhost:8081',
-            '/adapter': 'http://localhost:8081',
-            '/session': 'http://localhost:8081',
-            '/log': 'http://localhost:8081',
-            '/lib': 'http://localhost:8081',
+            '/files': 'http://127.0.0.1:8081',
+            '/adapter': 'http://127.0.0.1:8081',
+            '/session': 'http://127.0.0.1:8081',
+            '/log': 'http://127.0.0.1:8081',
+            '/lib': 'http://127.0.0.1:8081',
         }
     },
     webpack: {

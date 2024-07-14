@@ -1,7 +1,7 @@
 import ConfigCustomEasyAccess from './ConfigCustomEasyAccess.jsx';
 
 function App() {
-    return <ConfigCustomEasyAccess/>;
+    return <ConfigCustomEasyAccess />;
 }
 
 export default App;

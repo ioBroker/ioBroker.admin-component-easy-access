@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@mui/styles';
 
 import {
     Table,
@@ -16,17 +15,18 @@ import {
 // invalid
 // import ConfigGeneric from '@iobroker/adapter-react-v5/ConfigGeneric';
 // valid
-import { i18n, ConfigGeneric } from '@iobroker/adapter-react-v5';
+import { ConfigGeneric } from '@iobroker/json-config';
+import { i18n } from '@iobroker/adapter-react-v5';
 
-const styles = theme => ({
+const styles = {
     table: {
         minWidth: 400
     },
     header: {
         fontSize: 16,
-        fontWeight: 'bold'
-    }
-});
+        fontWeight: 'bold',
+    },
+};
 
 class ConfigCustomEasyAccess extends ConfigGeneric {
     componentDidMount() {
@@ -56,12 +56,12 @@ class ConfigCustomEasyAccess extends ConfigGeneric {
             const accessAllowedTabs    = ConfigGeneric.getValue(this.props.data, 'accessAllowedTabs')    || [];
 
             return <TableContainer>
-                <Table className={this.props.classes.table} size="small">
+                <Table style={styles.table} size="small">
                     <TableHead>
                         <TableRow>
-                            <TableCell className={this.props.classes.header}>{i18n.t('custom_easy_Instance')}</TableCell>
-                            <TableCell className={this.props.classes.header}>{i18n.t('custom_easy_Config')}</TableCell>
-                            <TableCell className={this.props.classes.header}>{i18n.t('custom_easy_Tab')}</TableCell>
+                            <TableCell style={styles.header}>{i18n.t('custom_easy_Instance')}</TableCell>
+                            <TableCell style={styles.header}>{i18n.t('custom_easy_Config')}</TableCell>
+                            <TableCell style={styles.header}>{i18n.t('custom_easy_Tab')}</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -115,11 +115,10 @@ ConfigCustomEasyAccess.propTypes = {
     themeType: PropTypes.string,
     themeName: PropTypes.string,
     style: PropTypes.object,
-    className: PropTypes.string,
     data: PropTypes.object.isRequired,
     schema: PropTypes.object,
     onError: PropTypes.func,
     onChange: PropTypes.func,
 };
 
-export default withStyles(styles)(ConfigCustomEasyAccess);
+export default ConfigCustomEasyAccess;
