@@ -1,6 +1,6 @@
 {
     "name": "@iobroker/admin-component-easy-access",
-    "version": "0.3.2",
+    "version": "1.0.0",
     "description": "Admin JSON config component",
     "author": {
         "name": "bluefox",
