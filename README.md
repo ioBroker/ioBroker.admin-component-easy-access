@@ -28,7 +28,7 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
-### 1.0.0 (2024-07-14)
+### **WORK IN PROGRESS**
 * (bluefox) Updated for Admin 7
 
 ### 0.3.2 (2022-06-17)
