@@ -17,7 +17,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@alcalzone/release-script": "^3.7.3",
     "@alcalzone/release-script-plugin-license": "^3.7.0",
-    "@iobroker/adapter-react-v5": "^6.0.19",
+    "@iobroker/adapter-react-v5": "^7.0.1",
     "@iobroker/json-config": "^7.0.13",
     "@mui/material": "^5.16.1",
     "prop-types": "^15.8.1",
