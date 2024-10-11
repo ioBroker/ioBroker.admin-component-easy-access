@@ -29,8 +29,8 @@ if (process.argv.includes('--0-clean')) {
 } else {
     deleteFoldersRecursive(`${__dirname}/admin`, ['admin-component-template.png', 'jsonConfig.json']);
     deleteFoldersRecursive(`${__dirname}/src/build`);
-    npmInstall(src)
-        .then(() => buildReact(src, { rootDir: __dirname, craco: true, exec: true }))
+    npmInstall(__dirname)
+        .then(() => buildReact(__dirname, { rootDir: __dirname, craco: true, exec: true }))
         .then(() => copyAllFiles())
         .catch(e => {
             console.error(`Cannot build: ${e}`);
