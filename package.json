@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.0.6",
+  "version": "1.0.7",
   "scripts": {
     "start": "set PORT=4173 && craco start",
     "lint": "eslint --fix --ext .js,.jsx src",
