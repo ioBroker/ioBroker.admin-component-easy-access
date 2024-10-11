@@ -13,10 +13,10 @@ import {
 
 // important to make from package and not from some children.
 // invalid
-// import ConfigGeneric from '@iobroker/adapter-react-v5/ConfigGeneric';
+// import ConfigGeneric from '@iobroker/react-components/ConfigGeneric';
 // valid
 import { ConfigGeneric } from '@iobroker/json-config';
-import { i18n } from '@iobroker/adapter-react-v5';
+import { I18n } from '@iobroker/react-components';
 
 const styles = {
     table: {
@@ -59,9 +59,9 @@ class ConfigCustomEasyAccess extends ConfigGeneric {
                 <Table style={styles.table} size="small">
                     <TableHead>
                         <TableRow>
-                            <TableCell style={styles.header}>{i18n.t('custom_easy_Instance')}</TableCell>
-                            <TableCell style={styles.header}>{i18n.t('custom_easy_Config')}</TableCell>
-                            <TableCell style={styles.header}>{i18n.t('custom_easy_Tab')}</TableCell>
+                            <TableCell style={styles.header}>{I18n.t('custom_easy_Instance')}</TableCell>
+                            <TableCell style={styles.header}>{I18n.t('custom_easy_Config')}</TableCell>
+                            <TableCell style={styles.header}>{I18n.t('custom_easy_Tab')}</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
