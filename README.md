@@ -8,7 +8,7 @@ Build process creates files in directory build.
 
 All files from `build/admin` folder must be in adapter admin directory. 
 
-To use this component in admin add to jsonConfig.json file:
+To use this component in admin, add to jsonConfig.json file:
 ```
     "accessAllowedConfigs": {
       "type": "custom",
