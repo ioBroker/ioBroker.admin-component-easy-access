@@ -13,7 +13,6 @@
     "1-npm": "node tasks --1-npm",
     "2-compile": "node tasks --2-compile",
     "3-copy": "node tasks --3-copy",
-    "prepublishOnly": "echo Run publish in dist && exit 1",
     "release": "release-script",
     "release-patch": "release-script patch --yes",
     "release-minor": "release-script minor --yes",
