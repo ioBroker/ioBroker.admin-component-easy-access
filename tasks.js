@@ -1,21 +1,14 @@
 const { deleteFoldersRecursive, npmInstall, buildReact, copyFiles } = require('@iobroker/build-tools');
 
 function copyAllFiles() {
-    copyFiles(['build/static/js/*.js'], 'dist/admin/custom/static/js');
-    copyFiles(['build/customComponents.js'], 'dist/admin/custom');
-    copyFiles(['build/customComponents.js.map'], 'dist/admin/custom');
-    copyFiles(['build/static/js/*.map'], 'dist/admin/custom/static/js');
-    copyFiles(['src/i18n/*.json'], 'dist/admin/custom/i18n');
-    copyFiles(['img/*'], 'dist/img');
-    copyFiles(['README.md', 'LICENSE'], 'dist');
-    copyFiles(['src/package.json'], 'dist');
+    copyFiles(['src/i18n/*.json'], 'admin/custom/i18n');
+    copyFiles(['build/static/js/*.js'], 'admin/custom/static/js');
+    copyFiles(['build/customComponents.js'], 'admin/custom');
+    copyFiles(['build/customComponents.js.map'], 'admin/custom');
+    copyFiles(['build/static/js/*.map'], 'admin/custom/static/js');
 }
 
 function build() {
-    const pack = require(`${__dirname}/package.json`);
-    const packSrc = require(`${__dirname}/src/package.json`);
-    packSrc.version = pack.version;
-    require('fs').writeFileSync(`${__dirname}/src/package.json`, JSON.stringify(packSrc, null, 4));
     return buildReact(__dirname, { rootDir: __dirname, craco: true, exec: true });
 }
 
@@ -36,7 +29,6 @@ if (process.argv.includes('--0-clean')) {
 } else if (process.argv.includes('--3-copy')) {
     copyAllFiles();
 } else {
-    deleteFoldersRecursive(`${__dirname}/dist`);
     deleteFoldersRecursive(`${__dirname}/build`);
     npmInstall(__dirname)
         .then(() => build())
