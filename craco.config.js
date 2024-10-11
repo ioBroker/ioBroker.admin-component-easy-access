@@ -1,6 +1,6 @@
 const CracoEsbuildPlugin = require('craco-esbuild');
 const { ProvidePlugin } = require('webpack');
-const cracoModuleFederation = require('@iobroker/adapter-react-v5/craco-module-federation');
+const cracoModuleFederation = require('@iobroker/react-components/craco-module-federation');
 
 module.exports = {
     plugins: [
