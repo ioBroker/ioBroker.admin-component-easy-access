@@ -11,6 +11,14 @@ function copyAllFiles() {
     copyFiles(['src/package.json'], 'dist');
 }
 
+function build() {
+    const pack = require(`${__dirname}/package.json`);
+    const packSrc = require(`${__dirname}/src/package.json`);
+    packSrc.version = pack.version;
+    require('fs').writeFileSync(`${__dirname}/src/package.json`, JSON.stringify(packSrc, null, 4));
+    return buildReact(__dirname, { rootDir: __dirname, craco: true, exec: true });
+}
+
 if (process.argv.includes('--0-clean')) {
     deleteFoldersRecursive(`${__dirname}/admin`, ['admin-component-template.png', 'jsonConfig.json']);
     deleteFoldersRecursive(`${__dirname}/src/build`);
@@ -20,17 +28,18 @@ if (process.argv.includes('--0-clean')) {
         process.exit(1);
     });
 } else if (process.argv.includes('--2-compile')) {
-    buildReact(__dirname, { rootDir: __dirname, craco: true, exec: true }).catch(e => {
-        console.error(`Cannot compile: ${e}`);
-        process.exit(1);
-    });
+    build()
+        .catch(e => {
+            console.error(`Cannot compile: ${e}`);
+            process.exit(1);
+        });
 } else if (process.argv.includes('--3-copy')) {
     copyAllFiles();
 } else {
     deleteFoldersRecursive(`${__dirname}/dist`);
     deleteFoldersRecursive(`${__dirname}/build`);
     npmInstall(__dirname)
-        .then(() => buildReact(__dirname, { rootDir: __dirname, craco: true, exec: true }))
+        .then(() => build())
         .then(() => copyAllFiles())
         .catch(e => {
             console.error(`Cannot build: ${e}`);
