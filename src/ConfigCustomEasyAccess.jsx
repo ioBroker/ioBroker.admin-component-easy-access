@@ -13,10 +13,10 @@ import {
 
 // important to make from package and not from some children.
 // invalid
-// import ConfigGeneric from '@iobroker/react-components/ConfigGeneric';
+// import ConfigGeneric from '@iobroker/adapter-react-v5/ConfigGeneric';
 // valid
 import { ConfigGeneric } from '@iobroker/json-config';
-import { I18n } from '@iobroker/react-components';
+import { I18n } from '@iobroker/adapter-react-v5';
 
 const styles = {
     table: {

@@ -28,8 +28,8 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
-### 1.0.7 (2024-10-11)
-* (bluefox) Replaced `@iobroker/adapter-react-v5` with `@iobroker/react-components`
+### **WORK IN PROGRESS**
+* (bluefox) Updated `@iobroker/adapter-react-v5`
 
 ### 1.0.1 (2024-07-14)
 * (bluefox) Updated for Admin 7
