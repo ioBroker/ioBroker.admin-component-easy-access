@@ -28,7 +28,7 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.0.9 (2024-12-06)
 * (bluefox) Updated packages
 
 ### 1.0.8 (2024-10-11)
