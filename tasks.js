@@ -21,11 +21,10 @@ if (process.argv.includes('--0-clean')) {
         process.exit(1);
     });
 } else if (process.argv.includes('--2-compile')) {
-    build()
-        .catch(e => {
-            console.error(`Cannot compile: ${e}`);
-            process.exit(1);
-        });
+    build().catch(e => {
+        console.error(`Cannot compile: ${e}`);
+        process.exit(1);
+    });
 } else if (process.argv.includes('--3-copy')) {
     copyAllFiles();
 } else {
