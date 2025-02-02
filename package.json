@@ -4,8 +4,9 @@
     "access": "public"
   },
   "version": "1.0.11",
+  "type": "module",
   "scripts": {
-    "start": "set PORT=4173 && craco start",
+    "start": "vite --port 4173",
     "lint": "eslint --fix --ext .js,.jsx src",
     "webpack-build": "craco build",
     "build": "node tasks",
@@ -20,6 +21,13 @@
     "release-major": "release-script major --yes --force-update-lockfile"
   },
   "devDependencies": {
+    "@module-federation/runtime": "^0.8.2",
+    "@module-federation/vite": "^1.1.9",
+    "vite": "5.2.10",
+    "vite-plugin-commonjs": "^0.10.4",
+    "vite-plugin-svgr": "^4.3.0",
+    "vite-tsconfig-paths": "^5.1.4",        
+    "@vitejs/plugin-react": "^4.3.4",
     "@craco/craco": "^7.1.0",
     "craco-esbuild": "^0.6.1",
     "craco-module-federation": "^1.1.0",
