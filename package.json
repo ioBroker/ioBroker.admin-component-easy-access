@@ -8,7 +8,7 @@
   "scripts": {
     "start": "vite --port 4173",
     "lint": "eslint --fix --ext .js,.jsx src",
-    "webpack-build": "craco build",
+    "webpack-build": "tsc && vite build",
     "build": "node tasks",
     "update-packages": "ncu --upgrade && cd src && ncu --upgrade && cd ..",
     "0-clean": "node tasks --0-clean",

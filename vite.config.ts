@@ -21,7 +21,7 @@ const config = {
             name: 'AdminComponentEasyAccessSet',
             filename: 'customComponents.js',
             exposes: {
-                './Components': './src/Components.jsx',
+                './Components': './src/Components.tsx',
             },
             remotes: {},
             shared: makeShared(['react', '@iobroker/json-config', '@iobroker/adapter-react-v5', 'react-dom', 'prop-types']),

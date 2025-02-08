@@ -7,7 +7,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Check
 // invalid
 // import ConfigGeneric from '@iobroker/adapter-react-v5/ConfigGeneric';
 // valid
-import { ConfigGeneric } from '@iobroker/json-config';
+import { ConfigGeneric, ConfigGenericProps, ConfigGenericState } from '@iobroker/json-config';
 import { I18n } from '@iobroker/adapter-react-v5';
 
 const styles = {
@@ -20,12 +20,16 @@ const styles = {
     },
 };
 
-class ConfigCustomEasyAccess extends ConfigGeneric {
+interface ConfigCustomEasyAccessState extends ConfigGenericState {
+    instances: { id: string; config: boolean; adminTab: ioBroker.InstanceObject['common']['adminTab'] }[];
+}
+
+class ConfigCustomEasyAccess extends ConfigGeneric<ConfigGenericProps, ConfigCustomEasyAccessState> {
     componentDidMount() {
         super.componentDidMount();
 
-        this.props.oContext.socket.getAdapterInstances().then(instances => {
-            instances = instances
+        this.props.oContext.socket.getAdapterInstances().then((instances: ioBroker.InstanceObject[]) => {
+            const _instances = instances
                 .filter(
                     instance =>
                         instance?.common?.adminUI &&
@@ -33,16 +37,16 @@ class ConfigCustomEasyAccess extends ConfigGeneric {
                 )
                 .map(instance => ({
                     id: instance._id.replace(/^system\.adapter\./, ''),
-                    config: instance.common.adminUI.config !== 'none',
+                    config: instance.common.adminUI?.config !== 'none',
                     adminTab: instance.common.adminTab,
                 }))
                 .sort((a, b) => (a.id > b.id ? 1 : a.id < b.id ? -1 : 0));
 
-            this.setState({ instances });
+            this.setState({ instances: _instances });
         });
     }
 
-    renderItem(error, disabled, defaultValue) {
+    renderItem(_error: unknown, _disabled: boolean, _defaultValue?: unknown): JSX.Element | string | null {
         if (!this.state.instances) {
             return null;
         }
@@ -115,16 +119,5 @@ class ConfigCustomEasyAccess extends ConfigGeneric {
         );
     }
 }
-
-ConfigCustomEasyAccess.propTypes = {
-    socket: PropTypes.object.isRequired,
-    themeType: PropTypes.string,
-    themeName: PropTypes.string,
-    style: PropTypes.object,
-    data: PropTypes.object.isRequired,
-    schema: PropTypes.object,
-    onError: PropTypes.func,
-    onChange: PropTypes.func,
-};
 
 export default ConfigCustomEasyAccess;
