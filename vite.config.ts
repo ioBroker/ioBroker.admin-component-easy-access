@@ -24,7 +24,7 @@ const config = {
                 './Components': './src/Components.jsx',
             },
             remotes: {},
-            shared: makeShared(['react', '@iobroker/adapter-react-v5', 'react-dom', 'prop-types']),
+            shared: makeShared(['react', '@iobroker/json-config', '@iobroker/adapter-react-v5', 'react-dom', 'prop-types']),
         }),
         react(),
         vitetsConfigPaths(),
