@@ -10,6 +10,7 @@
     "lint": "eslint --fix --ext .js,.jsx src",
     "vite-build": "tsc && vite build",
     "build": "node tasks.cjs",
+    "preview": "vite preview",
     "update-packages": "ncu --upgrade && cd src && ncu --upgrade && cd ..",
     "0-clean": "node tasks.cjs --0-clean",
     "1-npm": "node tasks.cjs --1-npm",
