@@ -28,7 +28,7 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 2.0.0 (2025-03-07)
 * (bluefox) Migrated to TypeScript
 
 ### 1.0.11 (2024-12-06)
