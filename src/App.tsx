@@ -1,6 +1,4 @@
-import ConfigCustomEasyAccess from './ConfigCustomEasyAccess';
-
-function App() {
+function App(): null {
     return null;
 }
 

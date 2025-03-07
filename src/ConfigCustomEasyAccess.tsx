@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Checkbox } from '@mui/material';
 
@@ -7,7 +6,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Check
 // invalid
 // import ConfigGeneric from '@iobroker/adapter-react-v5/ConfigGeneric';
 // valid
-import { ConfigGeneric, ConfigGenericProps, ConfigGenericState } from '@iobroker/json-config';
+import { ConfigGeneric, type ConfigGenericProps, type ConfigGenericState } from '@iobroker/json-config';
 import { I18n } from '@iobroker/adapter-react-v5';
 
 const styles = {
@@ -25,10 +24,10 @@ interface ConfigCustomEasyAccessState extends ConfigGenericState {
 }
 
 class ConfigCustomEasyAccess extends ConfigGeneric<ConfigGenericProps, ConfigCustomEasyAccessState> {
-    componentDidMount() {
+    componentDidMount(): void {
         super.componentDidMount();
 
-        this.props.oContext.socket.getAdapterInstances().then((instances: ioBroker.InstanceObject[]) => {
+        void this.props.oContext.socket.getAdapterInstances().then((instances: ioBroker.InstanceObject[]) => {
             const _instances = instances
                 .filter(
                     instance =>
@@ -88,7 +87,7 @@ class ConfigCustomEasyAccess extends ConfigGeneric<ConfigGenericProps, ConfigCus
                                                     _accessAllowedConfigs.push(row.id);
                                                     _accessAllowedConfigs.sort();
                                                 }
-                                                this.onChange('accessAllowedConfigs', _accessAllowedConfigs);
+                                                void this.onChange('accessAllowedConfigs', _accessAllowedConfigs);
                                             }}
                                         />
                                     ) : null}
@@ -106,7 +105,7 @@ class ConfigCustomEasyAccess extends ConfigGeneric<ConfigGenericProps, ConfigCus
                                                     _accessAllowedTabs.push(row.id);
                                                     _accessAllowedTabs.sort();
                                                 }
-                                                this.onChange('accessAllowedTabs', _accessAllowedTabs);
+                                                void this.onChange('accessAllowedTabs', _accessAllowedTabs);
                                             }}
                                         />
                                     ) : null}
