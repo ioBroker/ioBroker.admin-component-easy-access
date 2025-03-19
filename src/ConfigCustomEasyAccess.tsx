@@ -45,7 +45,7 @@ class ConfigCustomEasyAccess extends ConfigGeneric<ConfigGenericProps, ConfigCus
         });
     }
 
-    renderItem(_error: unknown, _disabled: boolean, _defaultValue?: unknown): JSX.Element | string | null {
+    renderItem(_error: unknown, _disabled: boolean, _defaultValue?: unknown): React.JSX.Element | string | null {
         if (!this.state.instances) {
             return null;
         }
