@@ -9,7 +9,7 @@ Build process creates files in directory build.
 All files from `build/admin` folder must be in adapter admin directory. 
 
 To use this component in admin, add to jsonConfig.json file:
-```
+```json
     "accessAllowedConfigs": {
       "type": "custom",
       "i18n": true,
@@ -28,6 +28,9 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
+### 2.0.0 (2025-03-07)
+* (bluefox) Migrated to TypeScript
+
 ### 1.0.11 (2024-12-06)
 * (bluefox) Updated packages
 
@@ -52,7 +55,7 @@ Explanation:
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2021-2024 bluefox <dogafox@gmail.com>
+Copyright (c) 2021-2025 bluefox <dogafox@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
