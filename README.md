@@ -11,10 +11,11 @@ All files from `build/admin` folder must be in adapter admin directory.
 To use this component in admin, add to jsonConfig.json file:
 ```json
     "accessAllowedConfigs": {
-      "type": "custom",
-      "i18n": true,
-      "url": "custom/customComponents.js",
-      "name": "AdminComponentEasyAccessSet/Components/ConfigCustomEasyAccess"
+          "type": "custom",
+          "i18n": true,
+          "url": "custom/customComponents.js",
+          "guiApi": 2
+          "name": "AdminComponentEasyAccessSet/Components/ConfigCustomEasyAccess"
     }
 ```
 
@@ -28,7 +29,7 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 3.0.1 (2026-07-26)
 * (bluefox) Migrated for Admin 8
 
 ### 2.0.1 (2025-03-19)
