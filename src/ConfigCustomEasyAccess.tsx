@@ -7,9 +7,9 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Check
 // import ConfigGeneric from '@iobroker/adapter-react-v5/ConfigGeneric';
 // valid
 import { ConfigGeneric, type ConfigGenericProps, type ConfigGenericState } from '@iobroker/json-config';
-import { I18n } from '@iobroker/adapter-react-v5';
+import { I18n } from '@iobroker/gui-components';
 
-const styles = {
+const styles: Record<string, React.CSSProperties> = {
     table: {
         minWidth: 400,
     },
@@ -23,29 +23,28 @@ interface ConfigCustomEasyAccessState extends ConfigGenericState {
     instances: { id: string; config: boolean; adminTab: ioBroker.InstanceObject['common']['adminTab'] }[];
 }
 
-class ConfigCustomEasyAccess extends ConfigGeneric<ConfigGenericProps, ConfigCustomEasyAccessState> {
-    componentDidMount(): void {
-        super.componentDidMount();
+export default class ConfigCustomEasyAccess extends ConfigGeneric<ConfigGenericProps, ConfigCustomEasyAccessState> {
+    async componentDidMount(): Promise<void> {
+        await super.componentDidMount();
 
-        void this.props.oContext.socket.getAdapterInstances().then((instances: ioBroker.InstanceObject[]) => {
-            const _instances = instances
-                .filter(
-                    instance =>
-                        instance?.common?.adminUI &&
-                        (instance.common.adminUI.config !== 'none' || instance.common.adminUI.tab),
-                )
-                .map(instance => ({
-                    id: instance._id.replace(/^system\.adapter\./, ''),
-                    config: instance.common.adminUI?.config !== 'none',
-                    adminTab: instance.common.adminTab,
-                }))
-                .sort((a, b) => (a.id > b.id ? 1 : a.id < b.id ? -1 : 0));
+        const instances = await this.props.oContext.socket.getAdapterInstances();
+        const _instances = instances
+            .filter(
+                instance =>
+                    instance?.common?.adminUI &&
+                    (instance.common.adminUI.config !== 'none' || instance.common.adminUI.tab),
+            )
+            .map(instance => ({
+                id: instance._id.replace(/^system\.adapter\./, ''),
+                config: instance.common.adminUI?.config !== 'none',
+                adminTab: instance.common.adminTab,
+            }))
+            .sort((a, b) => (a.id > b.id ? 1 : a.id < b.id ? -1 : 0));
 
-            this.setState({ instances: _instances });
-        });
+        this.setState({ instances: _instances });
     }
 
-    renderItem(_error: unknown, _disabled: boolean, _defaultValue?: unknown): React.JSX.Element | string | null {
+    renderItem(_error: boolean, _disabled: boolean, _defaultValue?: boolean): React.JSX.Element | string | null {
         if (!this.state.instances) {
             return null;
         }
@@ -118,5 +117,3 @@ class ConfigCustomEasyAccess extends ConfigGeneric<ConfigGenericProps, ConfigCus
         );
     }
 }
-
-export default ConfigCustomEasyAccess;

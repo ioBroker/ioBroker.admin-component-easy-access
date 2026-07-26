@@ -28,6 +28,9 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
+### **WORK IN PROGRESS**
+* (bluefox) Migrated for Admin 8
+
 ### 2.0.1 (2025-03-19)
 * (bluefox) Updated packages
 
@@ -58,7 +61,7 @@ Explanation:
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2021-2025 bluefox <dogafox@gmail.com>
+Copyright (c) 2021-2026 bluefox <dogafox@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
