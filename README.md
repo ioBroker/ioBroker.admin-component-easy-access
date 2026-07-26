@@ -29,7 +29,7 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
-### 3.0.4 (2026-07-26)
+### **WORK IN PROGRESS**
 * (bluefox) Migrated for Admin 8
 
 ### 2.0.1 (2025-03-19)
