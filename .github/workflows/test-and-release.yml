@@ -33,6 +33,7 @@ jobs:
         with:
           node-version: '22.x'
           test-command: 'false'
+          install-command: 'npm i'
           lint: true
 
   # Deploys the final package to NPM
@@ -57,4 +58,5 @@ jobs:
         with:
           node-version: '24.x'
           build: true
+          install-command: 'npm i'
           github-token: ${{ secrets.GITHUB_TOKEN }}
