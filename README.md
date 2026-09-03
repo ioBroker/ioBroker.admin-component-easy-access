@@ -29,7 +29,7 @@ Explanation:
 	### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 3.0.8 (2026-09-03)
 * (@GermanBluefox) Updated packages
 
 ### 3.0.7 (2026-07-27)
