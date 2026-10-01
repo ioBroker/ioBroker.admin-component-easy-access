@@ -29,7 +29,7 @@
     "@iobroker/eslint-config": "^2.3.4",
     "@iobroker/gui-components": "^10.2.1",
     "@iobroker/json-config": "^9.1.2",
-    "@module-federation/runtime": "^2.9.0",
+    "@module-federation/runtime": "^2.9.2",
     "@module-federation/vite": "^1.21.2",
     "@mui/icons-material": "^9.4.0",
     "@mui/material": "^9.4.0",
